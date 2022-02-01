@@ -1,0 +1,142 @@
+:root {
+    --text-base: #afb6c2;
+  --text-title: #d4ccb6;
+  --background: #191816;
+  --form-background: #24221f;
+  --primary-color: #ffc632;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Poppins', 'Roboto', sans-serif;
+}
+
+.main{
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    background: var(--background);
+}
+
+h1{
+    font-weight: 700;
+    color: var(--text-title);
+    font-size: 2rem;
+    
+}
+h1::before {
+    content: url(./images/log-in.svg)
+}
+
+.logo{
+    float: right;
+    background-image: url(./images/side-image.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left bottom;
+    width: 50vw;
+    height: 100vh;
+}
+
+
+.fieldset-container{
+    width: 560px;
+    height: 500px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    top: 120px;
+    background-color: var(--form-background);
+    border: none;
+    border-radius: 5px;
+}
+form{
+    display: flex;
+}
+
+.flex-cont{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.informations{
+    margin-top:28px
+}
+
+label{
+    color: var(--text-base);
+}
+
+#email, #password{
+    color: white;
+    width: 340px;
+    align-self: center;
+    padding: 8px;
+    background-color: var(--form-background);
+    border:  1px solid var(--text-base);
+    border-radius:5px;
+    margin-top: 8px
+}
+
+#email::placeholder{
+    content: url(./images/mail.svg);
+}
+
+#password::placeholder{ 
+    content: url(./images/lock.svg)
+}
+
+p{
+    color: var(--text-base);
+}
+
+a{
+    color: var(--primary-color)
+}
+
+#check-box{
+    margin-right: 15px;
+}
+
+#remember{
+    opacity: 0;
+    position: relative;
+    left: 20px;
+}
+
+#remember + #check::before {
+    content: " ";
+    height: 18px;
+    width: 18px;
+    background-color: var(--background);
+    border: 1px solid grey;
+    border-radius: 5px;
+    display: inline-block;
+    margin-right: 7px;
+    vertical-align: middle;
+    margin-bottom: 2px;
+}
+
+
+button{
+    padding: 15px;
+    background-color: var(--primary-color);
+    width: 340px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 18px;
+    color: white;
+}
+
+button:hover{
+    transform: scale(1.1);
+    transition-duration: 0.5s;
+    cursor: pointer;
+}
