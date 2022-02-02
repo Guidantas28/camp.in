@@ -21,6 +21,11 @@
     background: var(--background);
 }
 
+.logo-img{
+    margin: 20px;
+    padding: 20px
+}
+
 h1{
     font-weight: 700;
     color: var(--text-title);
@@ -31,7 +36,7 @@ h1::before {
     content: url(./images/log-in.svg)
 }
 
-.logo{
+.lateral-img{
     float: right;
     background-image: url(./images/side-image.jpg);
     background-repeat: no-repeat;
@@ -69,9 +74,6 @@ form{
     margin-top:28px
 }
 
-label{
-    color: var(--text-base);
-}
 
 #email, #password{
     color: white;
@@ -86,13 +88,35 @@ label{
 
 #email::placeholder{
     content: url(./images/mail.svg);
+    color: white;
+    left: 50px;
 }
 
 #password::placeholder{ 
     content: url(./images/lock.svg)
 }
 
+#email:focus{
+    outline: none;
+    border: 1px solid var(--primary-color) 
+}
+
+#password:focus{
+    outline: none;
+    border: 1px solid var(--primary-color) 
+}
+
+
+
 p{
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--text-base);
+}
+
+label{
+    font-size: 0.90rem;
+    font-weight: bold;
     color: var(--text-base);
 }
 
@@ -100,15 +124,21 @@ a{
     color: var(--primary-color)
 }
 
-#check-box{
-    margin-right: 15px;
-}
-
 #remember{
     opacity: 0;
     position: relative;
     left: 20px;
 }
+
+#check-box{
+    margin-right: 20px;
+   
+}
+
+#check{
+    margin-right: 70px;
+}
+
 
 #remember + #check::before {
     content: " ";
@@ -121,8 +151,14 @@ a{
     margin-right: 7px;
     vertical-align: middle;
     margin-bottom: 2px;
+    
 }
 
+#remember:checked + #check::before{
+    background-color: var(--primary-color);
+    content: url(./images/check.svg);
+    
+}
 
 button{
     padding: 15px;
@@ -139,4 +175,16 @@ button:hover{
     transform: scale(1.1);
     transition-duration: 0.5s;
     cursor: pointer;
+}
+
+.new-account{
+    color: var(--primary-color);
+    font-size: 0.75rem;
+    margin-top: -10px
+
+}
+
+a{
+    font-weight: bold;
+    font-size: 0.75rem;
 }
